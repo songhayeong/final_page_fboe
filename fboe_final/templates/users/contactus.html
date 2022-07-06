@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="icon" href="/static/images/onlylogo.png" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <link rel="stylesheet" href="/static/css/contact.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  <script defer src="/static/js/contact.js"></script>
+  <title>FBOE__Contact us</title>
+</head>
+<body style="overflow-x: hidden">
+  <img class="bg" src="/static/images/BG.png" alt="BG">
+  <header>
+    <div class="inner">
+      <a href="../" class="logo">
+        <img src="/static/images/FBOENAME.png" alt="FBOE" />
+      </a>
+
+
+      <div class="main__nav">
+
+        <div class="nav">
+          <div class="nav__name"><a href="../">Home</a></div>
+
+          <div class="nav__name" id="under"><a class="solution" href="../mbca">Solutions</a>
+
+            <ul class="solutions-nav">
+              <li><a href="../mbca">MBCA</a></li>
+              <li><a href="../amc">AMC</a></li>
+            </ul>
+
+          </div>
+          <div class="nav__name" id="third"><a href="../content1">About us</a></div>
+          <div class="nav__name" id="underline"><a class="contact" href="../contact">Contact us</a></div>
+        </div>
+        <!-- <a href="" class="nav__button">
+          <i class="fa-solid fa-bars"></i>
+        </a> -->
+      </div>
+      <a href="javascript:void(0)" class="nav__button">
+        <!-- <span class="material-icons-outlined"> -->
+          <img src="/static/images/bar.png" alt="IMAGE1">
+          <!-- </span> -->
+      </a>
+    </div>
+  </header>
+  <div class="middle">
+    <div class="left scroll-spy">
+      <img class="middle__bg" src="/static/images/BG.png" alt="">
+      <div class="left__contact back-to-position to-up delay-0">
+        <h1>Contact <br>us</h1>
+        <div class="left__space"></div>
+        <div class="pin back-to-position to-right delay-2">
+          <img src="/static/images/pin.png" alt="">
+          <p>울산광역시 중구 종가로 406-21<br>우정혁신도시 울산비즈파크 c동 1033호</p>
+        </div>
+        <br class="br_1"><br class="br_2">
+        <div class="phone pin back-to-position to-right delay-2">
+          <img src="/static/images/mail.png" alt="">
+          <div class="phone__number">
+            <!-- <p>010-0000-1111</p> -->
+            <p>fboe@fboeit.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="table scroll-spy">
+        <div class="container back-to-position to-left delay-1">
+          <form action="{% url 'users:contactus' %}" class="sign" method="post">
+            {% csrf_token %}
+            <div class="first">
+              <div class="company">C o m p a n y<br>
+                <label for="company"></label>
+                <input type="text" name="company" required id="id_company" placeholder="Company">
+              </div>
+              <div class="industry">I n d u s t r y<br>
+                <label for="industry"></label>
+                <input type="text" name="industry" id="industry" placeholder="Industry">
+              </div>
+            </div>
+            <br>
+            <!-- N a m e -->
+            <div class="second">
+              <div class="firstname">N a m e<br>
+                <label for="firstname"></label>
+                <input type="text" name="firstname" id="firstname" placeholder="First Name"><br><div class="under-write"><div class="subname">First&nbsp; Name</div></div>
+              </div>
+              <div class="lastname"><br>
+                <label for="lastname"></label>
+                <input type="text" name="lastname" id="lastname" placeholder="Last Name"><br><div class="under-write"><div class="subname">Last&nbsp; Name</div></div>
+              </div>
+            </div>
+            <br>
+            <div class="third">
+              <div class="job">J o b&nbsp;&nbsp;&nbsp;&nbsp;T i t l e<br>
+                <label for="job_title"></label>
+                <input type="text" name="job_title" id="job_title" placeholder="Job Title">
+              </div>
+              <div class="email">E m a i l<br>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email">
+              </div>
+            </div>
+            <br>
+            <div>M e s s a g e<br>
+              <label for="message"></label>
+              <textarea name="message" class="autosize" id="message" onkeydown="resize(this)" onkeyup="resize(this)" style="height:25px;" placeholder="Message"></textarea>
+              <script>
+                function resize(obj) {
+                  obj.style.height = "1px";
+                  obj.style.height = (-20+obj.scrollHeight)+"px";
+                }
+                </script>
+            </div>
+            <div class="bt back-to-position to-down delay-2">
+              <button type="button"><input type="submit" value="Submit" class="btn" onclick="test()" /></button>
+<!--              <input type="submit" value="Submit" class="btn" onclick="test()">-->
+            </div>
+          </form>
+          <!-- <a href="{%url 'users:contactus' %}" ><button>돌아가기</button></a> -->
+        </div>
+      </div>
+      <!-- <div class="space2"></div> -->
+      <div class="map scroll-spy">
+        <div id="map" class="back-to-position to-left delay-0"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e7d924c1d76f0b898ee76d62213b4cc8"></script>
+      </div>
+    </div>
+  </div>
+  <!-- <footer>
+    <div class="inner">
+      <div class="content">
+      </div>
+    </div>
+  </footer>  -->
+
+</body>
+</html>
