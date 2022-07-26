@@ -3,6 +3,7 @@
 body {
   font-family: 'Secular One', sans-serif;
   width: 100%;
+  line-height: 1.4;
 }
 
 img {
@@ -90,16 +91,17 @@ header .inner {
   margin: 0 auto;
 }
 header .inner .logo{
+  height: 42px;
   position: absolute;
   top:0;
   bottom:0;
   left:10px;
-  margin:25px 0;
+  margin:auto;
 
 }
 header .inner .logo img {
-  width: 139.88px;
-  height: 50px;
+  width: 117.5px;
+  height: 42px;
 }
 header .inner .main__nav{
   width:700px;
@@ -140,7 +142,7 @@ header .inner .main__nav .nav .nav__name a::after{
   left: 50%;
   bottom: -4px;
   width: 0;
-  height: 4px;
+  height: 3px;
   background-color: rgb(69, 48, 138);
   transition: all .6s;
   /* border-radius: 0 10px 10px 0; */
@@ -151,7 +153,7 @@ header .inner .main__nav .nav .nav__name a::before{
   right: 50%;
   bottom: -4px;
   width: 0;
-  height: 4px;
+  height: 3px;
   background-color: rgb(69, 48, 138);
   transition: all .6s;
   /* border-radius: 10px 0 0 10px; */
@@ -223,7 +225,7 @@ header .inner .main__nav .nav .nav__name .solutions-nav li a:hover:before{
   content: '';
   display: block;
   width: 100%;
-  height: 4px;
+  height: 3px;
   position: absolute;
   bottom: -4px;
   background: rgb(69, 48, 138);
@@ -238,10 +240,13 @@ header .inner .main__nav .nav .nav__name .solutions-nav li a:hover:before{
 header .nav__button{
   position:absolute;
   right: 15px;
-
+  width:48px;
   font-size: 24px;
   display: none;
-  top:30px;
+  /* top:30px; */
+  top:0;
+  bottom:0;
+  margin: auto 0;
 }
 
 
@@ -323,6 +328,9 @@ header .nav__button{
   font-weight: 700;
   font-size: 20px;
   color: white;
+  width: 275px;
+  height: 60px;
+  line-height: 1;
 }
 
 
@@ -384,14 +392,13 @@ header .nav__button{
 
 .company-overview .inner .description-group .text-group {
   width: 500px;
-  height: 400px;
+  height: auto;
   margin: 20px 50px;
   font-size: 30px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .company-overview .inner .description-group .text-group p {
@@ -405,7 +412,8 @@ header .nav__button{
 
 /* OUR MANAGEMENT */
 .our-management {
-  /* background-color: chartreuse; */
+  /* background-color: #EBF5FF; */
+  /* background-color: #DEDCDF; */
 }
 
 .our-management .inner {
@@ -612,7 +620,6 @@ header .nav__button{
   height:700px;
   background-color: midnightblue;
 }
-
 .contact .inner .contact__frame{
   justify-content: center;
   position: absolute;
@@ -662,17 +669,143 @@ input{
 .guest__email input{
   width:518px;
 }
-
 textarea {
   width:518px;
   min-height: 100px;
   resize: vertical;
 }
-
 .middle .contact .inner .contact__frame .table .click .button{
-
   border-radius: 10px;
 } */
+
+/* Contact us */
+.contact {
+  padding: 15vh 0 12vh;
+  background: url("/static/images/footer__BG.png") no-repeat;
+  background-size: 100% 100%;
+}
+.contact > .inner {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+.contact > .inner .contact_text {
+  width: 300px;
+}
+.contact > .inner .contact_text > h2 {
+  font-family: "Secular One", sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  padding-bottom: 70px;
+}
+.contact > .inner .contact_text .des {
+  color: #777;
+}
+.contact > .inner .contact_text .email {
+  padding: 5px 30px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.contact > .inner .contact_text .address,
+.contact > .inner .contact_text .nameAndTel {
+  font-weight: 600;
+  font-size: 13px;
+}
+.contact > .inner .contact_text .nameAndTel {
+  padding-top: 20px;
+}
+.contact > .inner .contact_text p {
+  padding-left: 30px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.contact > .inner .contact_text::before {
+  content: "";
+  width: 4px;
+  height: 210px;
+  background-color: #888;
+  position: absolute;
+  top: 0;
+  bottom: -200px;
+  margin: auto;
+}
+.contact > .inner .sign {
+  width: 428px;
+}
+.contact > .inner .sign input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  outline: none;
+  padding: 10px 0;
+  font-weight: 600;
+}
+.contact > .inner .sign textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  outline: none;
+  padding: 10px 0 0;
+  font-weight: 600;
+}
+.contact > .inner .sign label {
+  font-weight: 600;
+}
+.contact > .inner .sign .first {
+  padding-right: 90px;
+}
+.contact > .inner .sign .Title {
+  display: inline-flex;
+  padding-bottom: 40px;
+}
+.contact > .inner .sign .bt button {
+  border: 1px solid #222;
+  border-radius: 30px;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+/* footer */
+footer {
+  background-color: rgb(69, 48, 138);
+  height: auto;
+}
+footer .inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 10px;
+  color: white;
+  font-family: 'Nanum Gothic';
+}
+footer .inner .companyname {
+}
+footer .inner .companyname .eng{
+  font-family: 'Secular One';
+  font-size: 25px;
+  padding: 8px 10px 0 0;
+}
+
+footer .inner .info{
+  font-size: 13px;
+}
+footer .inner .info .footercontact{
+  display: flex;
+}
+footer .inner .info .footercontact p{
+  padding: 15px 50px 15px 0;
+}
+footer .inner .info p{
+  padding: 0 0 10px 0;
+}
+footer .inner .copyright{
+  font-size: 11px;
+  text-align: right;
+  padding: 0 0 10px 0;
+}
+
 
 @media screen and (max-width: 768px){
 
@@ -687,10 +820,10 @@ textarea {
     position: relative;
   }
   header .inner .logo {
-    top: -15px;
+    top: -45px;
   }
   header .inner .logo img {
-    width: 83.93px;
+    width: 80px;
     height: 30px;
   }
   header .inner .main__nav .nav{
@@ -759,10 +892,13 @@ textarea {
   }
   header .nav__button{
     /* z-index: 1; */
-    position: fixed;
     display:block;
-    top:0;
+    top:10%;
     position: absolute;
+  }
+  header .nav__button img{
+    width: 40px;
+    height: 40px;
   }
   /* header .nav.active{
     display:flex;
@@ -800,9 +936,12 @@ textarea {
   header .inner .main__nav .nav .nav__name .aboutus{
     color:#B7A4EE;
   } */
-  #underline a:hover {
+  /* #underline a:hover {
     color: rgb(69, 48, 138);
-  }
+  } */
+  /* header .inner .main__nav .nav .nav__name .aboutus:hover {
+    color: rgb(69, 48, 138);
+  } */
   header .inner .main__nav .nav .nav__name :nth-child(1){
     margin-top:0;
   }
@@ -858,7 +997,6 @@ textarea {
     width: 0;
     height: 4px;
     background-color: white;
-
   }
   header .inner .main__nav .nav .nav__name a:hover::after{
     width:50%;
@@ -889,7 +1027,7 @@ textarea {
     justify-content: center;
     text-align: center;
     font-size: 50px;
-
+    line-height: 1.4;
   }
   .aboutus-header .inner2 .title-wrapper .aboutus-wrapper {
 
@@ -934,8 +1072,8 @@ textarea {
     position: relative;
     margin: 0 auto;
     padding: 0;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 260px;
 
   }
   .company-overview .inner .description-group .image-group img.logo {
@@ -955,6 +1093,7 @@ textarea {
   }
 
   /* OUR MANAGEMENT */
+
   .our-management .inner .title-group h1{
     font-size: 30px;
   }
@@ -1001,8 +1140,11 @@ textarea {
   }
 
   /* VISION */
-  .vision .inner {
+  .vision {
 
+  }
+  .vision .inner {
+    height: 1100px;
   }
   .vision .inner .title-group h1{
     font-size: 30px;
@@ -1027,6 +1169,23 @@ textarea {
   }
   .vision .inner ul.vision > li .text-group {
     display: block;
+  }
+
+  /* contact us */
+
+  /* footer */
+  footer .inner .companyname .eng{
+    font-size: 30px;
+    padding: 10px 20px 20px 0;
+  }
+  footer .inner .info .footercontact {
+    flex-direction: column;
+  }
+  footer .inner .info .footercontact p{
+    padding: 0 0 10px 0;
+  }
+  footer .inner .info p{
+    padding: 20px 0;
   }
 
 }

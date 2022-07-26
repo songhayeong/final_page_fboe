@@ -22,8 +22,7 @@
   <meta property="twitter:image" content="images\FBOE.png" />
   <meta property="twitter:url" content="https://guileless-tulumba-bd09b5.netlify.app" />
 
-  <link rel="icon" href="/static/images/onlylogo.png" />
-<!--  <link rel="icon" href="/static/images/favicon.ico">-->
+  <link rel="icon" href="/static/images/onlylogo.png">
   <!--GSAP & ScrollToPlugin-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
     integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
@@ -51,7 +50,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
 
   <!--Google Material Icons-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- sweetalert2 -->
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="/static/css/main.css">
@@ -60,6 +62,37 @@
 </head>
 
 <body style="overflow-x: hidden">
+  <!-- <header>
+    <div class="inner">
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="/">
+            <img src="./images/name.png" alt="">
+          </a>
+        </div>
+
+        <ul class="navbar__menu">
+          <li>
+            <a href="javascript:void(0)">Home</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Solutions</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">About Us</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Meeting</a>
+          </li>
+        </ul>
+
+        <a href="javascript:void(0)" class="navbar__toogleBtn">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
+    </div>
+  </header> -->
+
   <!-- HEADER -->
   <header>
     <div class="inner">
@@ -75,7 +108,7 @@
               <li><a href="../amc">AMC</a></li>
             </ul>
           </div>
-          <div class="nav__name"><a class="aboutus" href="../content1">About us</a></div>
+          <div class="nav__name" id="underline"><a class="aboutus" href="../introduction">About us</a></div>
           <div class="nav__name"><a href="../contact">Contact us</a></div>
         </div>
       </div>
@@ -85,10 +118,12 @@
     </a>
   </header>
 
+
   <!-- visual -->
   <section class="visual">
     <img class="imgbg fade-in" src="/static/images/FBOE_bg2.png" alt="">
     <p class="word fade-in">Think, Optimally!</p>
+    <p class="word2 fade-in">AI Solution</p>
   </section>
 
   <!-- Vision -->
@@ -96,8 +131,8 @@
     <div class="inner scroll-spy-box scroll-spy">
       <div class="vision-description back-to-position to-bottom delay-0">
         <h3>Our vision</h3>
-        <p>It is to form a bright future with people-centered thinking skills by proving infinite value based on trust
-          and improving creative thinking skills that maximize efficiency.
+        <p>For the blank, By the blank, Of the blank
+          In our FBOE, different viewpoints come together to become “One-Team”, and mutual trust and creativity create an infinite future.
         </p>
       </div>
     </div>
@@ -148,49 +183,46 @@
       </div>
       <ul class="experience__contents">
         <li class="content__item scroll-spy">
-          <div class="item__img back-to-position to-right delay-1">
+          <div class="item__img img_1 back-to-position spd to-right delay-1">
             <img src="/static/images/ref1.png" alt="ref1">
           </div>
-          <div class="item__text back-to-position to-left delay-2">
-            <h4>Title</h4>
-            <p>weoifnwioenf oiwenfoinawlenf ioalwnef liawnfwilo awenfiloawnfioawenf oawilnfioawe faiwln ew4
-              awoeifno oawenfoiawenf woiaenf oiawwefwefewfwf fewfwfe
+          <div class="item__text back-to-position spd to-left delay-1">
+            <h4>AI-based vessel defect status detection application</h4>
+            <p>AI application that detects corrosion, cracks, and deformation
+               of the walls inside the ship, stores and manages them in the database, and enables real-time contorl
             </p>
           </div>
         </li>
-        <li class="content__item scroll-spy">
-          <div class="item__text back-to-position to-right delay-1">
-            <h4>Title</h4>
-            <p>refer ence__co nte t refe r ence__coerwer wwn tewe rwenr wer wet referen ce__content
-              refsdference__content reference__contenter ence__ werwer content
+        <li class="content__item two scroll-spy">
+          <div class="item__text back-to-position spd to-right delay-1">
+            <h4>Training Cycle Recommendation AI Solution to Prevent Athlete Injuries</h4>
+            <p>Athletes need training of appropriate intensity and duration to avoid injury.
+              We independently modeled artificial intelligence capable of accommodating various
+              constraints and provided service through Cloud AI API.
             </p>
           </div>
-          <div class="item__img back-to-position to-left delay-2">
+          <div class="item__img img_2 back-to-position spd to-left delay-1">
             <img src="/static/images/ref2.png" alt="ref2">
           </div>
         </li>
-        <li class="content__item scroll-spy">
-          <div class="item__img back-to-position to-right delay-1">
+        <li class="content__item three scroll-spy">
+          <div class="item__img img_3 back-to-position spd to-right delay-1">
             <img src="/static/images/reference3.png" alt="">
           </div>
-          <div class="item__text back-to-position to-left delay-2">
-            <h4>Title</h4>
-            <p class="p_3">refer ence__conte nt referen ce__cont ent wr rwer wer werwer wer wer wer weference__content
-              reference__content reference__content
-              nce__conte nt referenc __content refe ence__content
+          <div class="item__text back-to-position spd to-left delay-1">
+            <h4>Korean License Plate Recognition AI</h4>
+            <p class="p_3">Real-time License Plate Recognition AI Solution with 95%+ performance
             </p>
           </div>
         </li>
-        <li class="content__item scroll-spy">
-          <div class="item__text back-to-position to-right delay-1">
-            <h4>Title</h4>
-            <p class="p_4">reference__asdfontes adft reff erence_fwe_contentf sd ref sderen e__cont t r
-              fesdfwefnce__content
-              reference__content
-              _contentnt refds fsdference_f _content
+        <li class="content__item foo scroll-spy">
+          <div class="item__text back-to-position spd to-right delay-1">
+            <h4>Real-time ship’s consumables management Solution</h4>
+            <p class="p_4">Window Application that allows real-time control and management
+              of numerous consumables in a ship.
             </p>
           </div>
-          <div class="item__img back-to-position to-left delay-2">
+          <div class="item__img img_4 back-to-position spd to-left delay-1">
             <img src="/static/images/ref3.png" alt="ref3">
           </div>
         </li>
@@ -203,8 +235,8 @@
       <div class="scroll-spy-box scroll-spy">
         <h3 class="back-to-position to-bottom delay-0">Our Solutions</h3>
         <div class="inner__box">
-          <p class="back-to-position to-top delay-0">It is to form a bright future with people-centered thinking skills
-            by
+          <p class="back-to-position to-top delay-0">
+            It is to form a bright future with people-centered thinking skills by
             proving infinite value based on trust
             and improving creative thinking skills that maximize efficiency.
           </p>
@@ -220,7 +252,7 @@
         </div>
         <div class="img scroll-spy-box scroll-spy">
           <h4 class="Solution-title">AMC</h4>
-          <img src="/static/images/Solution__2.png" alt="">
+          <img src="/static/images/AMC_Solution.png" alt="">
           <div class="img__btn back-to-position to-bottom delay-1">
             <a href="amc" class="btn">learn more</a>
           </div>
@@ -228,57 +260,16 @@
       </div>
     </div>
   </section>
-
-  <!-- <section class="awards">
-    <div class="inner">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/awards_slide1.jpg" alt="대통령 표창" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide2.jpg" alt="대통령 표창 (3년 연속)" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide3.jpg" alt="우수사업주 인증" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide4.jpg" alt="경연대회 대상" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide5.jpg" alt="대한상의회장상" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide6.jpg" alt="기업사회공헌 활동 부문" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide7.jpg" alt="KSI 1위 (5년 연속)" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide8.jpg" alt="KS-SQI 1위 (5년 연속)" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide9.jpg" alt="커피전문점 부문 (4년 연속)" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/awards_slide10.jpg" alt="동반성장 부문 (4년 연속)" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <section class="contact scroll-spy">
     <div class="inner">
       <div class="contact_text">
         <h2 class="back-to-position to-bottom delay-0">Contact us</h2>
         <div class="text back-to-position to-right delay-2">
-          <p class="des">ewfih wef iuf w wefiw wiuefwe be bwe ewwb ewu ewbi ewqpsdjk ew4
-            bg wubaskj qweb qls ewlwk
+          <p class="des">We provide optimal artificial intelligence solutions for various fields.
           </p>
-          <p class="nameAndTel">대표: 안성문</p>
-          <p class="email">E-mail: fboe@fboeit.com</p>
-          <p class="address">Address: 울산광역시 중구 종가로 406-21 우정혁신도시 울산비즈파크 c동 1033호</p>
+          <p class="nameAndTel"><span class="material-icons">account_circle</span> 안성문</p>
+          <p class="email"><span class="material-icons">email</span>fboe@fboeit.com</p>
+          <p class="address"><span class="material-icons">home</span> 울산광역시 중구 종가로 406-21 우정혁신도시 울산비즈파크 c동 1033호</p>
         </div>
       </div>
       <form action="{% url 'users:index' %}" class="sign" method="post">
@@ -324,57 +315,13 @@
           </div>
         </div>
 
+<!--        <div class="bt back-to-position to-bottom delay-7">-->
+<!--          <button class="btn btn&#45;&#45;white" type="submit">Submit</button>-->
+<!--        </div>-->
         <div class="bt back-to-position to-bottom delay-7">
-          <button class="btn btn--white" type="submit">Submit</button>
+          <button id="alertStart" class="btn btn--white" type="submit">Submit</button>
         </div>
       </form>
-<!--                <form action="{% url 'users:index' %}" class="sign" method="post">-->
-<!--            {% csrf_token %}-->
-<!--&lt;!&ndash;            {{ form.as_p }}&ndash;&gt;-->
-<!--            <div class="first">-->
-<!--              <div class="company">C o m p a n y<br>-->
-<!--                <label for="company"></label>-->
-<!--                <input type="text" name="company" required id="id_company" placeholder="Company">-->
-<!--              </div>-->
-<!--              <div class="industry">I n d u s t r y<br>-->
-<!--                <label for="industry"></label>-->
-<!--                <input type="text" name="industry" id="industry" placeholder="Industry">-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <br>-->
-<!--            &lt;!&ndash; N a m e &ndash;&gt;-->
-<!--            <div class="second">-->
-<!--              <div class="firstname">N a m e<br>-->
-<!--                <label for="firstname"></label>-->
-<!--                <input type="text" name="firstname" id="firstname" placeholder="First Name"><br><div class="under-write"><div class="subname">First&nbsp; Name</div></div>-->
-<!--              </div>-->
-<!--              <div class="lastname"><br>-->
-<!--                <label for="lastname"></label>-->
-<!--                <input type="text" name="lastname" id="lastname" placeholder="Last Name"><br><div class="under-write"><div class="subname">Last&nbsp; Name</div></div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <br>-->
-<!--            <div class="third">-->
-<!--              <div class="job">J o b&nbsp;&nbsp;&nbsp;&nbsp;T i t l e<br>-->
-<!--                <label for="job_title"></label>-->
-<!--                <input type="text" name="job_title" id="job_title" placeholder="Job Title">-->
-<!--              </div>-->
-<!--              <div class="email">E m a i l<br>-->
-<!--                <label for="email"></label>-->
-<!--                <input type="text" name="email" id="email" placeholder="Email">-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <br>-->
-<!--            <div>M e s s a g e<br>-->
-<!--              <label for="message"></label>-->
-<!--              <textarea name="message" class="autosize" id="message" onkeydown="resize(this)" onkeyup="resize(this)" style="height:25px;" placeholder="Message"></textarea>-->
-<!--            </div>-->
-<!--            <div class="bt back-to-position to-down delay-2">-->
-<!--              <button type="button"><input type="submit" value="Submit" class="btn" onclick="test()" /></button>-->
-<!--&lt;!&ndash;              <input type="submit" value="Submit" class="btn" onclick="test()">&ndash;&gt;-->
-<!--            </div>-->
-<!--          </form>-->
-
       <p class="copyright">
         &copy; <span class="this-year"></span> FBOE Inc. All rights reserved.
       </p>

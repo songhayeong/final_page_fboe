@@ -109,3 +109,11 @@ console.log(matchMedia("screen and (max-width: 426px)").matches);
  */
  const thisYear = document.querySelector('.this-year')
  thisYear.textContent = new Date().getFullYear()
+
+ const alertStart = document.querySelector("#alertStart");
+alertStart.onclick = function () {
+  Swal.fire({
+    text: 'Thank for your submit',
+    icon: 'success',
+  })
+}

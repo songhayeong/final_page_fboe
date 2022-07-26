@@ -157,11 +157,11 @@ def amc(request):
 def mbca(request):
     return render(request, "mbca.html")
 
-def content1(request):
-    return render(request, "content1.html")
+def introduction(request):
+    return render(request, "introduction.html")
 
-def content3(request):
-    return render(request, "content3.html")
+def history(request):
+    return render(request, "history.html")
 
 
 

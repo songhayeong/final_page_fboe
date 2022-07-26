@@ -19,7 +19,7 @@ class Contact(django_forms.ModelForm):
             'company': django_forms.TextInput(attrs={'placeholder': 'company'}),
             'industry': django_forms.TextInput(attrs={'placeholder': 'industry'}),
             'firstname': django_forms.TextInput(attrs={'placeholder': 'firstname'}),
-            'lastname': django_forms.TextInput(attrs={'placeholder': 'lastname'}),
+            'flastname': django_forms.TextInput(attrs={'placeholder': 'lastname'}),
             'job_title': django_forms.TextInput(attrs={'placeholder': 'job_title'}),
             'email': django_forms.TextInput(attrs={'placeholder': 'email'}),
             # 'MM': django_forms.TextInput(attrs={'placeholder' : 'MM'}),

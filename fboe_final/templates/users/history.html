@@ -1,7 +1,5 @@
-<!--history , content3-->
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +7,7 @@
 
   <title>About Us</title>
 
-  <link rel="icon" href="./images/onlylogo.png" />
+  <link rel="icon" href="/static/images/onlylogo.png" />
   <!--브라우저 스타일 초기화-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
   <!--Google Fonts - 나눔고딕-->
@@ -26,9 +24,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
   <!--Lodash-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script> -->
+
 
   <link rel="stylesheet" href="/static/css/content3.css" />
   <script defer src="/static/js/aboutus.js"></script>
+
 </head>
 <body>
 
@@ -50,7 +54,7 @@
                 <li><a href="../amc">AMC</a></li>
               </ul>
             </div>
-            <div class="nav__name" id="underline"><a class="aboutus" href="../content1">About us</a></div>
+            <div class="nav__name" id="underline"><a class="aboutus" href="../introduction">About us</a></div>
             <div class="nav__name"><a href="../contact">Contact us</a></div>
           </ul>
 
@@ -76,8 +80,8 @@
         </div>
         <div class="aboutus-wrapper">
           <ul class="aboutus-menu">
-            <li> <a href="/content3/content1.html" class="content1">INTRODUCTION</a> </li>
-            <li> <a href="/content3/content3.html" class="content3">HISTORY</a> </li>
+            <li> <a href="../introduction" class="content1">INTRODUCTION</a> </li>
+            <li> <a href="../history" class="content3">HISTORY</a> </li>
           </ul>
         </div>
       </div>
@@ -190,27 +194,35 @@
       <div class="swiper mySwiper back-to-position to-bottom delay-1">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img src="/static/images/award1.png" />
             <p>award1</p>
           </div>
           <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <img src="/static/images/award2.png" />
             <p>award2</p>
           </div>
           <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img src="/static/images/award3.png" />
             <p>award3</p>
           </div>
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
             <p>award4</p>
           </div>
           <div class="swiper-slide">
             <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
             <p>award5</p>
-          </div>
+          </div> -->
         </div>
         <div class="swiper-pagination"></div>
+
+        <div class="swiper-prev">
+          <span class="material-icons">arrow_back</span>
+        </div>
+        <div class="swiper-next">
+          <span class="material-icons">arrow_forward</span>
+        </div>
+
       </div>
 
 
@@ -222,36 +234,24 @@
 
   </section>
 
-
-
-
-  <!-- CONTACT-US -->
-  <!-- <section class="contact">
+  <footer>
     <div class="inner">
-      <div class="contact__frame">
-        <div class="contact__frame__left">
-          <div class="title">Contact us</div>
-          <div class="mail">이메일</div>
-          <div class="number">전화번호</div>
-        </div>
-        <div class="table">
-          <div class="name">Name
-            <div class="name__all">
-              <div class="name__first"><input type="text" placeholder="First Name"><br>First Name</div>
-              <div class="name__second"><input type="text" placeholder="Last Name"><br>Last Name</div>
-            </div>
-          </div>
-          <div class="guest__email">Email<br><input type="text" placeholder="Email"></div>
-          <div class="message">Message<br><textarea name="" id="" cols="30" rows="15" placeholder="Message"></textarea></div>
-          <div class="click">
-
-            <a href="javascript:void(0)"><input class="button" type="button" name="send" value="send"></a>
-
-          </div>
-        </div>
+      <div class="companyname">
+        <p class="eng">FBOE</p>
       </div>
+      <div class="info">
+        <div class="footercontact">
+          <p class="email">fboe@fboeit.com</p>
+        </div>
+        <p class="address">Room 1033, Ulsan Biz Park, 406-21, Jongga-ro, <br>Jung-gu, Ulsan, Republic of Korea</p>
+      </div>
+
+      <p class="copyright">
+        <!-- &copy; <span class="this-year"></span> FBOEIT Company. All Rights Reserved. -->
+        FBOE Co., Ltd. All Rights Reserved.
+      </p>
     </div>
-  </section> -->
+  </footer>
 
 
 </body>
