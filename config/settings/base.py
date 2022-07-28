@@ -82,6 +82,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "fboe_final.users",
+    "fboe_NeuralDrop"
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
