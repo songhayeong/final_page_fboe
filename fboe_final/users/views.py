@@ -11,6 +11,7 @@ from django.core.mail import EmailMultiAlternatives, BadHeaderError
 from django.template import loader
 from django.http import HttpResponse
 import threading
+import requests
 
 User = get_user_model()
 

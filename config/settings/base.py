@@ -4,6 +4,7 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
+import dj_database_url
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # fboe_final/
@@ -71,6 +72,7 @@ DJANGO_APPS = [
     "django.contrib.admin",
     "django.forms",
     "gmailapi_backend",
+    "dj_database_url"
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -141,6 +143,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 # STATIC
@@ -280,3 +283,5 @@ SOCIALACCOUNT_FORMS = {"signup": "fboe_final.users.forms.UserSocialSignupForm"}
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
