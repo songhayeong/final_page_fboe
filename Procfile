@@ -1,1 +1,1 @@
-web: gunicorn config.wsgi --log-file
+web: gunicorn fboe_final.wsgi --log-file
