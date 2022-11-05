@@ -10,6 +10,7 @@ from .forms import Contact, Contact1
 from django.core.mail import EmailMultiAlternatives, BadHeaderError
 from django.template import loader
 from django.http import HttpResponse
+import threading
 
 User = get_user_model()
 
@@ -17,7 +18,7 @@ def send_email(subject, body, from_email, recipient_list, fail_silently=False, h
 
     EmailThread(subject, body, from_email, recipient_list, fail_silently, html).start()
 
-import threading
+
 class EmailThread(threading.Thread):
 
     def __init__(self, subject, body, from_email, recipient_list, fail_silently, html):

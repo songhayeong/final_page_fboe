@@ -15,15 +15,18 @@ class User(AbstractUser):
     name = CharField(_("Name of User"), blank=True, max_length=255)
     first_name = None  # type: ignore
     last_name = None  # type: ignore
-
-    def get_absolute_url(self):
-        """Get url for user's detail view.
-
-        Returns:
-            str: URL for user detail.
-
-        """
-        return reverse("users:detail", kwargs={"username": self.username})
+    # email = models.EmailField()
+    # password = models.CharField(max_length=255)
+    # password1 = models.CharField(max_length=255)
+#
+#     def get_absolute_url(self):
+#         """Get url for user's detail view.
+#
+#         Returns:
+#             str: URL for user detail.
+#
+#         """
+#         return reverse("users:detail", kwargs={"username": self.username})
 
 
 class Contactus(models.Model):
